@@ -17,7 +17,7 @@ void setup() {
   pinMode(firstPushButton, INPUT);
   pinMode(secondPushButton, INPUT);
   // initialize digital pin LED_BUILDTIN as an output:
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(13, OUTPUT);
 }
 
 // the loop routine runs over and over again forever:
@@ -31,16 +31,16 @@ void loop() {
     //delay(1); // delay in between reads for stability
   // if state equal zero the led turn off
     if (buttonFirstState == 1) {
-      digitalWrite(LED_BUILTIN, HIGH); // turn the LED on (High is the voltage level)
+      digitalWrite(13, HIGH); // turn the LED on (High is the voltage level)
     } else if (buttonSecondState == 1) {
-      digitalWrite(LED_BUILTIN, HIGH);   
+      digitalWrite(13, HIGH);   
       delay(500); // 1000 equal a second
-      digitalWrite(LED_BUILTIN, LOW); // turn the LED off (LOW is the voltage level)
+      digitalWrite(13, LOW); // turn the LED off (LOW is the voltage level)
       delay(500);
     } else { // when none button it was press
-      digitalWrite(LED_BUILTIN, HIGH);   
+      digitalWrite(12, HIGH);   
       delay(250);
-      digitalWrite(LED_BUILTIN, LOW); // turn the LED off (LOW is the voltage level)
+      digitalWrite(12, LOW); // turn the LED off (LOW is the voltage level)
       delay(250);
     }
 }
